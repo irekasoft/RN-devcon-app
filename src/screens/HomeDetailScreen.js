@@ -4,7 +4,8 @@ import {
   View, 
   Text,
   Dimensions,
-  Image
+  Image, 
+  Linking
 
 } from 'react-native'
 

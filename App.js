@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
   View,
   Text,  
+  Image,
 } from 'react-native'
 
 import {createStackNavigator, createBottomTabNavigator } from 'react-navigation'
@@ -27,7 +28,8 @@ const HomeStackNavigator = createStackNavigator({
     headerStyle:{
       backgroundColor:'#1D1D1D'
     },
-    tabBarLabel:'Hi'
+    tabBarLabel:'Hi',
+    
   }
 })
 
@@ -47,8 +49,63 @@ const RootNavigator = createBottomTabNavigator({
   TabProfile:{
     screen: ProfileMainScreen
   }
-
+},{
+  navigationOptions: ({navigation}) => ({
+    tabBarIcon: ({ tintColor }) => {
+      const { routeName } = navigation.state;
+      let iconName;
+      if (routeName === 'TabHome') {
+        iconName = require('./src/img/ico_tab_1.png');
+      } else if (routeName === 'TabAbout') {
+        iconName = require('./src/img/ico_tab_1.png');
+      } else if (routeName === 'TabEvents') {
+        iconName = require('./src/img/ico_tab_1.png');
+      } else if (routeName === 'TabChat') {
+        iconName = require('./src/img/ico_tab_1.png');
+      } else if (routeName === 'TabProfile') {
+        iconName = require('./src/img/ico_tab_1.png');
+      }               
+      return <Image source={iconName} style={{tintColor:tintColor}} />;
+    },
+    tabBarLabel: ({ tintColor }) => {
+      const { routeName } = navigation.state;
+      let titleString;
+      if (routeName === 'TabHome') {
+        titleString = "Home";
+      } else if (routeName === 'TabAbout') {
+        titleString = "About";
+      } else if (routeName === 'TabEvents') {
+        titleString = "Events";
+      } else if (routeName === 'TabChat') {
+        titleString = "Chat";
+      } else if (routeName === 'TabProfile') {
+        titleString = "Profile";
+      }     
+      return <Text style={{fontSize:10,color:tintColor}}>{titleString}</Text>
+    },
+    tabBarVisible: tabBarVisible( navigation ),
+  })
 })
+
+const tabBarVisible = (navigation) => {
+
+  const { routes } = navigation.state;
+  
+  let showTabbar = true;
+
+  console.log('tabbarvisible');
+  console.log(navigation);
+
+  if ( routes !== undefined ){
+    routes.forEach((route) => {
+      if (route.routeName === 'HomeDetail') {
+        showTabbar = false;
+      } 
+    });
+  }  
+
+  return showTabbar;  
+};
 
 class App extends Component {
   render(){
