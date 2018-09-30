@@ -14,13 +14,15 @@ import CardList from './src/components/CardList'
 class App extends Component {
   render(){
     return (
+      
       <SafeAreaView style={styles.container}>           
 
         {/* Header Cover */}
         <View style={{width:WIDTH, height:152, backgroundColor:'white'}} ></View>            
-        <CardList tilte="AAB" titleB="BBB"/> 
-        
+        <CardList tilte="AAB" titleB="BBB"/>
+
       </SafeAreaView>
+
     )
   }
 }
