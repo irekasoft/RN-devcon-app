@@ -88,7 +88,7 @@ const RootNavigator = createBottomTabNavigator({
       } else if (routeName === 'TabProfile') {
         titleString = "Profile";
       }     
-      return <Text style={{fontSize:10,color:tintColor}}>{titleString}</Text>
+      return <Text style={{fontSize:10,color:tintColor, textAlign:'center'}}>{titleString}</Text>
     },
     tabBarVisible: tabBarVisible(navigation),
     

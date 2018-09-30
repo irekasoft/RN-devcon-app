@@ -48,7 +48,7 @@ class HomeMainScreen extends Component {
 }
 const styles = {
   container: {
-    paddingTop:StatusBar.currentHeight,   
+    // paddingTop:StatusBar.currentHeight,   
     backgroundColor:'#ffffff',
     flex:1,
   }
