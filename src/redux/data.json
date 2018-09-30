@@ -1,0 +1,35 @@
+[
+  {
+    "_id":0,
+    "name":"Academia"
+  },
+  {
+    "_id":1,
+    "name":"Volunteers"
+  },
+  {
+    "_id":2,
+    "name":"Notice Board"
+  },
+  {
+    "_id":3,
+    "name":"Machine Learning"
+  },
+  {
+    "_id":4,
+    "name":"Data Science"
+  },
+  {
+    "_id":5,
+    "name":"Data Science"
+  },
+  {
+    "_id":6,
+    "name":"React Native"
+  },
+  {
+    "_id":7,
+    "name":"UI / UX"
+  }  
+
+]

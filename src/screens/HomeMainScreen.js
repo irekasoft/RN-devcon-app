@@ -14,10 +14,17 @@ const WIDTH = Dimensions.get('window').width
 import CardList from '../components/CardList'
 import { ScrollView } from 'react-native-gesture-handler';
 
-class MainHomeScreen extends Component {
+class HomeMainScreen extends Component {
+
+  static navigationOptions = {
+    title: 'DevCon',
+
+  }
+
   render(){
     return (      
-      <SafeAreaView style={styles.container}>                  
+      <SafeAreaView style={styles.container}>     
+        <StatusBar barStyle="light-content"/>          
         <ScrollView>
 
           {/* Header Cover */}
@@ -48,4 +55,4 @@ const styles = {
   }
 }
 
-export default MainHomeScreen;
+export default HomeMainScreen;

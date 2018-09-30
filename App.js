@@ -5,7 +5,7 @@ import {
 } from 'react-native'
 
 import {createStackNavigator, createBottomTabNavigator } from 'react-navigation'
-import MainHomeScreen from './src/screens/MainHomeScreen'
+import HomeMainScreen from './src/screens/HomeMainScreen'
 import AboutMainScreen from './src/screens/AboutMainScreen';
 import EventMainScreen from './src/screens/EventsMainScreen';
 import ChatMainScreen from './src/screens/ChatMainScreen';
@@ -13,14 +13,22 @@ import ProfileMainScreen from './src/screens/ProfileMainScreen';
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
-    screen: MainHomeScreen
+    screen: HomeMainScreen
   },
+  
+},{
+  navigationOptions:{
+    headerTintColor:'white',
+    headerStyle:{
+      backgroundColor:'#1D1D1D'
+    }
+  }
 })
 
 
 const RootNavigator = createBottomTabNavigator({
   TabHome:{
-    screen: HomeStackNavigator
+    screen: HomeStackNavigator,    
   },
   TabAbout:{
     screen: AboutMainScreen

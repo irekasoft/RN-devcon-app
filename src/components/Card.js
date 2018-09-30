@@ -18,6 +18,11 @@ class Card extends Component {
           <TouchableOpacity>
             <Image source={ this.props.img ? this.props.img : require('../img/machine_learning.jpg')} style={{width:'100%',height:'100%'}} />
           </TouchableOpacity>
+
+          <TouchableOpacity style={{position:'absolute',right:3,top:3}} >
+            <Image source={require('../img/ico_telegram.png')} />
+          </TouchableOpacity>
+
         </View> 
 
         <TouchableOpacity>
