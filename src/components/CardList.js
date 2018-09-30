@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   ScrollView
 } from 'react-native'
+
 import Card from './Card';
 
 const WIDTH = Dimensions.get('window').width
@@ -16,20 +17,18 @@ const WIDTH = Dimensions.get('window').width
 class CardList extends Component {
   render() {
     return (
-      <ScrollView>
-      <View style={{width:WIDTH, backgroundColor:'skyblue', flexDirection:'row', flexWrap:'wrap'}}>
-
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>        
-         <Card title="Hllo"/>                
-
+      
+      <View style={{width:WIDTH, backgroundColor:'white', flexDirection:'row', flexWrap:'wrap'}}>
+         <Card title="Academia"/>        
+         <Card title="Volunteers"/>        
+         <Card title="Notice Board"/>        
+         <Card title="Machine Learning"/>        
+         <Card title="Data Science"/>        
+         <Card title="React Native"/>        
+         <Card title="IoT"/>        
+         <Card title="UI / UX"/>               
       </View> 
-      </ScrollView>
+      
       );
   }
 }
