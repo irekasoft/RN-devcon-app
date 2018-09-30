@@ -5,6 +5,7 @@ import {
   Image,
   TouchableOpacity,
   Linking,
+  ScrollView
 } from 'react-native'
 
 const HeaderText = (props) => {
@@ -24,7 +25,7 @@ const PillText = (props) => {
 class AboutMainScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         
         <Image style={{alignSelf:'center'}} source={require('../img/img_devcon_logo.png')} />
 
@@ -51,7 +52,7 @@ class AboutMainScreen extends Component {
         </View>
         </TouchableOpacity>
 
-      </View>
+      </ScrollView>
     );
   }
 }
