@@ -26,9 +26,9 @@ const HomeStackNavigator = createStackNavigator({
   navigationOptions:{
     headerTintColor:'white',
     headerStyle:{
-      backgroundColor:'#1D1D1D'
+      backgroundColor:'#1D1D1D',
+      borderBottomWidth:0,
     },
-    tabBarLabel:'Hi',
     
   }
 })
@@ -50,7 +50,14 @@ const RootNavigator = createBottomTabNavigator({
     screen: ProfileMainScreen
   }
 },{
-  navigationOptions: ({navigation}) => ({
+  initialRouteName: 'TabAbout', // prod: TabHome
+  navigationOptions: ({navigation}) => ({    
+    tabBarOptions: {      
+      activeTintColor:'#E559A1',
+      style: {
+        borderTopWidth: 0
+      },
+    },
     tabBarIcon: ({ tintColor }) => {
       const { routeName } = navigation.state;
       let iconName;
@@ -83,7 +90,8 @@ const RootNavigator = createBottomTabNavigator({
       }     
       return <Text style={{fontSize:10,color:tintColor}}>{titleString}</Text>
     },
-    tabBarVisible: tabBarVisible( navigation ),
+    tabBarVisible: tabBarVisible(navigation),
+    
   })
 })
 
