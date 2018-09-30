@@ -18,7 +18,6 @@ class HomeMainScreen extends Component {
 
   static navigationOptions = {
     title: 'DevCon',
-
   }
 
   render(){
@@ -28,7 +27,7 @@ class HomeMainScreen extends Component {
         <ScrollView>
 
           {/* Header Cover */}
-          <View style={{width:WIDTH, height:152, backgroundColor:'white'}}>
+          <View style={{width:WIDTH, height:152, backgroundColor:'white',marginTop:0}}>
             <Image style={{width:'100%',height:'100%'}} source={require('../img/img_header.png')}/>
           </View>     
 
@@ -40,7 +39,7 @@ class HomeMainScreen extends Component {
           </View>
 
           {/* List of Groups  */}        
-          <CardList/>
+          <CardList {...this.props} />
 
         </ScrollView>
       </SafeAreaView>

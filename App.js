@@ -10,11 +10,15 @@ import AboutMainScreen from './src/screens/AboutMainScreen';
 import EventMainScreen from './src/screens/EventsMainScreen';
 import ChatMainScreen from './src/screens/ChatMainScreen';
 import ProfileMainScreen from './src/screens/ProfileMainScreen';
+import HomeDetailScreen from './src/screens/HomeDetailScreen';
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
     screen: HomeMainScreen
   },
+  HomeDetail:{
+    screen: HomeDetailScreen
+  }
   
 },{
   navigationOptions:{

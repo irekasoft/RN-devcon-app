@@ -19,14 +19,14 @@ class CardList extends Component {
     return (
       
       <View style={{width:WIDTH, backgroundColor:'white', flexDirection:'row', flexWrap:'wrap'}}>
-         <Card title="Academia"/>        
-         <Card title="Volunteers"/>        
-         <Card title="Notice Board"/>        
-         <Card title="Machine Learning"/>        
-         <Card title="Data Science"/>        
-         <Card title="React Native" img={require('../img/react_native.jpg')}/>        
-         <Card title="IoT"/>        
-         <Card title="UI / UX"/>               
+         <Card title="Academia" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="Volunteers" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="Notice Board" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="Machine Learning" />        
+         <Card title="Data Science" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="React Native" img={require('../img/react_native.jpg')} onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="IoT" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
+         <Card title="UI / UX" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />               
       </View> 
       
       );
