@@ -1,11 +1,40 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { 
+
+  View, 
+  Text,
+  Dimensions,
+  Image
+
+} from 'react-native'
+
+const WIDTH = Dimensions.get('window').width;
 
 class HomeDetailScreen extends Component {
+
+  static navigationOptions = (navigation) = {
+    title: '',
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>HomeDetailScreen</Text>
+
+        <Image 
+          style={{width:WIDTH, height:255}}
+          source={require('../img/img_react_native_cover.png')}
+        />
+
+        <View style={{padding:12}}>
+        <Text style={{fontSize:18, fontWeight:'900', marginBottom:20}} >React Native</Text>
+
+        <Text style={{fontSize:13, lineHeight:30}}>
+        Make use code snippet feature in VS Code make your life bit more easier when creating a new component or screen with React Native.
+Just type rns an viola everything is ready.
+What you have to do is open VS Code > Preference > User Snippets and add this new one.
+        </Text>
+        </View>
+
       </View>
     );
   }
@@ -14,8 +43,7 @@ class HomeDetailScreen extends Component {
 const styles = {
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+
   },
 };
 

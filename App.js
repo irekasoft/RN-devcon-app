@@ -14,7 +14,8 @@ import HomeDetailScreen from './src/screens/HomeDetailScreen';
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
-    screen: HomeMainScreen
+    screen: HomeMainScreen,
+    
   },
   HomeDetail:{
     screen: HomeDetailScreen
@@ -25,10 +26,10 @@ const HomeStackNavigator = createStackNavigator({
     headerTintColor:'white',
     headerStyle:{
       backgroundColor:'#1D1D1D'
-    }
+    },
+    tabBarLabel:'Hi'
   }
 })
-
 
 const RootNavigator = createBottomTabNavigator({
   TabHome:{

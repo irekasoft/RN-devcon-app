@@ -7,7 +7,8 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  Linking
 } from 'react-native'
 
 import Card from './Card';
@@ -19,14 +20,37 @@ class CardList extends Component {
     return (
       
       <View style={{width:WIDTH, backgroundColor:'white', flexDirection:'row', flexWrap:'wrap'}}>
-         <Card title="Academia" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="Volunteers" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="Notice Board" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="Machine Learning" />        
-         <Card title="Data Science" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="React Native" img={require('../img/react_native.jpg')} onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="IoT" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />        
-         <Card title="UI / UX" onPress={()=>{this.props.navigation.navigate('HomeDetail') }} />               
+         <Card 
+          title="Academia" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }} 
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }} />        
+         <Card title="Volunteers" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }}
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }}  />        
+         <Card title="Notice Board" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }}
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }}  />        
+         <Card title="Machine Learning" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }}
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }}  />        
+         <Card title="Data Science" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }} 
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }} 
+          />        
+         <Card title="React Native" 
+          img={require('../img/react_native.jpg')} 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }} 
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }} 
+          />        
+         <Card title="IoT" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }} 
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }} 
+          />        
+         <Card title="UI / UX" 
+          onPress={()=>{this.props.navigation.navigate('HomeDetail') }} 
+          onPressTelegram={()=>{ Linking.openURL('http://link.devcon.my/telegram-academia'); }} 
+          />               
+
       </View> 
       
       );
