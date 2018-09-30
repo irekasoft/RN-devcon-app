@@ -7,6 +7,8 @@ import {
   Image
 } from 'react-native'
 
+import AppStyle from '../styles/AppStyle'
+
 const WIDTH = Dimensions.get('window').width
 
 class Card extends Component {
@@ -14,7 +16,7 @@ class Card extends Component {
     return (
       <View style={{ width:WIDTH/2, height:121, justifyContent:'center', alignItems:'center',marginBottom:10}}>      
 
-        <View style={{ width:'95%', height:94,backgroundColor:'white',borderRadius:13, backgroundColor:'skyblue',overflow:'hidden'}}>   
+        <View style={{ width:'95%', height:94,backgroundColor:'white',borderRadius:13, backgroundColor:AppStyle.activeTintColor,overflow:'hidden'}}>   
           <TouchableOpacity onPress={this.props.onPress} >
             <Image source={ this.props.img ? this.props.img : require('../img/machine_learning.jpg')} style={{width:'100%',height:'100%'}} />
           </TouchableOpacity>

@@ -7,11 +7,16 @@ import {
 
 import {createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeMainScreen from './src/screens/HomeMainScreen'
-import AboutMainScreen from './src/screens/AboutMainScreen';
-import EventMainScreen from './src/screens/EventsMainScreen';
-import ChatMainScreen from './src/screens/ChatMainScreen';
-import ProfileMainScreen from './src/screens/ProfileMainScreen';
-import HomeDetailScreen from './src/screens/HomeDetailScreen';
+import AboutMainScreen from './src/screens/AboutMainScreen'
+import EventMainScreen from './src/screens/EventsMainScreen'
+import ChatMainScreen from './src/screens/ChatMainScreen'
+import ProfileMainScreen from './src/screens/ProfileMainScreen'
+import HomeDetailScreen from './src/screens/HomeDetailScreen'
+import MembersMainScreen from './src/screens/MembersMainScreen'
+
+import AppStyle from './src/styles/AppStyle'
+import EventDetailScreen from './src/screens/EventDetailScreen';
+import MemberDetailScreen from './src/screens/MemberDetailScreen';
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
@@ -20,7 +25,7 @@ const HomeStackNavigator = createStackNavigator({
   },
   HomeDetail:{
     screen: HomeDetailScreen
-  }
+  },
   
 },{
   navigationOptions:{
@@ -37,24 +42,43 @@ const HomeStackNavigator = createStackNavigator({
   }
 })
 
+const EventsStackNavigator = createStackNavigator({
+  EventsHome:{
+    screen: EventMainScreen
+  },
+  EventDetail:{
+    screen: EventDetailScreen
+  }
+})
+
+const MembersStackNavigator = createStackNavigator({
+  MembersHome:{
+    screen: MembersMainScreen
+  },
+  MemberDetail:{
+    screen: MemberDetailScreen
+  }
+})
+
 const RootNavigator = createBottomTabNavigator({
   TabHome:{
     screen: HomeStackNavigator,    
   },
+  TabEvents:{
+    screen: EventsStackNavigator
+  },
+  MembersMainScreen:{
+    screen: MembersStackNavigator
+  },
   TabAbout:{
     screen: AboutMainScreen
   },
-  TabEvents:{
-    screen: EventMainScreen
-  },
-  MembersMainScreen:{
-    screen: MembersMainScreen
-  }
+
 },{
   initialRouteName: 'TabHome', // prod: TabHome
   navigationOptions: ({navigation}) => ({    
     tabBarOptions: {      
-      activeTintColor:'#E559A1',
+      activeTintColor:AppStyle.activeTintColor,
       style: {
         borderTopWidth: 0
       },
@@ -83,7 +107,7 @@ const RootNavigator = createBottomTabNavigator({
       } else if (routeName === 'TabEvents') {
         titleString = "Events";
       } else if (routeName === 'MembersMainScreen') {
-        titleString = "Profile";
+        titleString = "Members";
       }     
       return <Text style={{fontSize:10,color:tintColor, textAlign:'center'}}>{titleString}</Text>
     },
