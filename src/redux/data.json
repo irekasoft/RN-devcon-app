@@ -1,7 +1,9 @@
 [
   {
     "_id":0,
-    "name":"Academia"
+    "name":"Academia",
+    "cover_img_url":"",
+    "telegram_url":""
   },
   {
     "_id":1,
@@ -30,6 +32,33 @@
   {
     "_id":7,
     "name":"UI / UX"
-  }  
-
+  },
+  {
+    "_id":8,
+    "name":"Web"
+  },
+  {
+    "_id":9,
+    "name":"Java"
+  },
+  {
+    "_id":10,
+    "name":"Android"
+  },
+  {
+    "_id":11,
+    "name":"iOS"
+  }, 
+  {
+    "_id":12,
+    "name":"Blockchain"
+  },
+  {
+    "_id":13,
+    "name":"Arduino & Scratch"
+  },
+  {
+    "_id":14,
+    "name":"Architecture"
+  }
 ]
