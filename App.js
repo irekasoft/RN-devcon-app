@@ -55,15 +55,15 @@ const RootNavigator = createBottomTabNavigator({
       const { routeName } = navigation.state;
       let iconName;
       if (routeName === 'TabHome') {
-        iconName = require('./src/img/ico_tab_1.png');
+        iconName = require('./src/img/ico_home.png');
       } else if (routeName === 'TabAbout') {
-        iconName = require('./src/img/ico_tab_1.png');
+        iconName = require('./src/img/ico_about.png');
       } else if (routeName === 'TabEvents') {
-        iconName = require('./src/img/ico_tab_1.png');
+        iconName = require('./src/img/ico_events.png');
       } else if (routeName === 'TabChat') {
-        iconName = require('./src/img/ico_tab_1.png');
+        iconName = require('./src/img/ico_chat.png');
       } else if (routeName === 'TabProfile') {
-        iconName = require('./src/img/ico_tab_1.png');
+        iconName = require('./src/img/ico_profile.png');
       }               
       return <Image source={iconName} style={{tintColor:tintColor}} />;
     },
