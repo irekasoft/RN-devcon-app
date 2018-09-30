@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 const WIDTH = Dimensions.get('window').width
 
-import CardComponent from './src/components/CardComponent'
+import CardList from './src/components/CardList'
 
 class App extends Component {
   render(){
@@ -18,7 +18,7 @@ class App extends Component {
 
         {/* Header Cover */}
         <View style={{width:WIDTH, height:152, backgroundColor:'white'}} ></View>            
-        <CardComponent tilte="AAB" titleB="BBB"/> 
+        <CardList tilte="AAB" titleB="BBB"/> 
         
       </SafeAreaView>
     )

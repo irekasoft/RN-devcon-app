@@ -13,7 +13,7 @@ import Card from './Card';
 
 const WIDTH = Dimensions.get('window').width
 
-class CardComponent extends Component {
+class CardList extends Component {
   render() {
     return (
       <ScrollView>
@@ -42,4 +42,4 @@ const styles = {
   },
 };
 
-export default CardComponent;
+export default CardList;
