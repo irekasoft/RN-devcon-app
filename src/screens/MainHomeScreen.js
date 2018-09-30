@@ -17,25 +17,25 @@ import { ScrollView } from 'react-native-gesture-handler';
 class MainHomeScreen extends Component {
   render(){
     return (      
-      <SafeAreaView style={styles.container}>          
-        
-        {/* Header Cover */}
-        <View style={{width:WIDTH, height:152, backgroundColor:'white'}}>
-          <Image style={{width:'100%',height:'100%'}} source={require('../img/img_header.png')}/>
-        </View>     
-
+      <SafeAreaView style={styles.container}>                  
         <ScrollView>
-        <View style={{padding: 20}}>
-          <Text style={{fontSize:15,textAlign:'center'}}>
-          We educate people for free. We build community. We are powered by Volunteers. Our success is measured by how many lives that we are able to improve.
-          </Text>
-        </View>
 
-        {/* List of Groups  */}
-        
-        <CardList/>
+          {/* Header Cover */}
+          <View style={{width:WIDTH, height:152, backgroundColor:'white'}}>
+            <Image style={{width:'100%',height:'100%'}} source={require('../img/img_header.png')}/>
+          </View>     
+
+          {/* Header Text */}
+          <View style={{padding: 20}}>
+            <Text style={{fontSize:15,textAlign:'center'}}>
+            We educate people for free. We build community. We are powered by Volunteers. Our success is measured by how many lives that we are able to improve.
+            </Text>
+          </View>
+
+          {/* List of Groups  */}        
+          <CardList/>
+
         </ScrollView>
-
       </SafeAreaView>
     )
   }

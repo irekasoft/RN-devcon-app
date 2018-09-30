@@ -24,7 +24,7 @@ class CardList extends Component {
          <Card title="Notice Board"/>        
          <Card title="Machine Learning"/>        
          <Card title="Data Science"/>        
-         <Card title="React Native"/>        
+         <Card title="React Native" img={require('../img/react_native.jpg')}/>        
          <Card title="IoT"/>        
          <Card title="UI / UX"/>               
       </View> 
