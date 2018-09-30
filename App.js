@@ -28,8 +28,12 @@ const HomeStackNavigator = createStackNavigator({
     headerStyle:{
       backgroundColor:'#1D1D1D',
       borderBottomWidth:0,
-    },
-    
+
+    },    
+    headerTitleStyle:{
+      textAlign:'center',
+      
+    }
   }
 })
 
@@ -43,11 +47,8 @@ const RootNavigator = createBottomTabNavigator({
   TabEvents:{
     screen: EventMainScreen
   },
-  TabChat: {
-    screen: ChatMainScreen
-  },
-  TabProfile:{
-    screen: ProfileMainScreen
+  MembersMainScreen:{
+    screen: MembersMainScreen
   }
 },{
   initialRouteName: 'TabHome', // prod: TabHome
@@ -67,9 +68,7 @@ const RootNavigator = createBottomTabNavigator({
         iconName = require('./src/img/ico_about.png');
       } else if (routeName === 'TabEvents') {
         iconName = require('./src/img/ico_events.png');
-      } else if (routeName === 'TabChat') {
-        iconName = require('./src/img/ico_chat.png');
-      } else if (routeName === 'TabProfile') {
+      } else if (routeName === 'MembersMainScreen') {
         iconName = require('./src/img/ico_profile.png');
       }               
       return <Image source={iconName} style={{tintColor:tintColor}} />;
@@ -83,9 +82,7 @@ const RootNavigator = createBottomTabNavigator({
         titleString = "About";
       } else if (routeName === 'TabEvents') {
         titleString = "Events";
-      } else if (routeName === 'TabChat') {
-        titleString = "Chat";
-      } else if (routeName === 'TabProfile') {
+      } else if (routeName === 'MembersMainScreen') {
         titleString = "Profile";
       }     
       return <Text style={{fontSize:10,color:tintColor, textAlign:'center'}}>{titleString}</Text>

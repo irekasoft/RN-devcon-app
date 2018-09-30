@@ -3,11 +3,13 @@
     "_id":0,
     "name":"Academia",
     "cover_img_url":"",
-    "telegram_url":""
+    "telegram_url":"http://link.devcon.my/telegram-academia"
   },
   {
     "_id":1,
-    "name":"Volunteers"
+    "name":"Volunteers",
+    "cover_img_url":"",
+    "telegram_url":""
   },
   {
     "_id":2,
