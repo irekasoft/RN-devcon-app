@@ -50,7 +50,7 @@ const RootNavigator = createBottomTabNavigator({
     screen: ProfileMainScreen
   }
 },{
-  initialRouteName: 'TabAbout', // prod: TabHome
+  initialRouteName: 'TabHome', // prod: TabHome
   navigationOptions: ({navigation}) => ({    
     tabBarOptions: {      
       activeTintColor:'#E559A1',
