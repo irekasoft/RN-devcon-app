@@ -47,6 +47,10 @@ const PillButton2 = (props) => {
 
 class AboutMainScreen extends Component {
 
+  static navigationOptions = {
+    title: 'About',
+  }
+
   componentDidMount(){      
   }
 
@@ -54,7 +58,10 @@ class AboutMainScreen extends Component {
     return (
       <ScrollView style={styles.container}>
         
-        <Image style={{alignSelf:'center'}} source={require('../img/img_devcon_logo.png')} />
+        <View style={{backgroundColor:'black'}}>
+          <Image style={{alignSelf:'center'}} source={require('../img/img_devcon_logo.png')} />
+        </View>
+
         <HeaderText text="By a community for the community"/>
 
         <Text style={styles.bodyText}>We are an open community consists of tech experts and people with big hearts to help and spread on technology knowledge to the public with no fee at all. Currently, we deliver the following areas:</Text>
@@ -119,7 +126,6 @@ class AboutMainScreen extends Component {
 const styles = {
   container: {
     flex: 1,
-    marginTop:44,
   },
   bodyText:{padding:12,fontSize:17,lineHeight:26}
 };

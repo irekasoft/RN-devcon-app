@@ -77,6 +77,23 @@ const MembersStackNavigator = createStackNavigator({
   }
 })
 
+const AboutStackNavigator = createStackNavigator({
+  AboutMain:{
+    screen: AboutMainScreen
+  }
+},{
+  navigationOptions:{
+    headerTintColor:'white',
+    headerStyle:{
+      backgroundColor:AppStyle.headerBackgroundColor,
+      borderBottomWidth:0,
+    },    
+    headerTitleStyle:{
+      textAlign:'center',      
+    }
+  }
+})
+
 const RootNavigator = createBottomTabNavigator({
   TabHome:{
     screen: HomeStackNavigator,    
@@ -88,7 +105,7 @@ const RootNavigator = createBottomTabNavigator({
     screen: MembersStackNavigator
   },
   TabAbout:{
-    screen: AboutMainScreen
+    screen: AboutStackNavigator
   },
 
 },{

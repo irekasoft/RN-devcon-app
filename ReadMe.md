@@ -26,3 +26,7 @@ Join DevCon React Native Telegram Group [here](https://t.me/joinchat/ADNaO0l8x_d
  3. `yarn install` to install the required packages
  4. Do some magic
  5. Send a pull request via github
+
+# Screenshots
+
+<center><img src="assets/screenshot.png" alt="alt text" width="320" /></center>

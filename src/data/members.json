@@ -6,14 +6,17 @@
     "description":"",
     "birthday":"",
     "skillset":"",
-    "area":""
+    "area":"",
+    "profile_pic_url":""
   },
   {
     "name":"Name #2",
     "telegram":"",
+    "github":"",
     "description":"",
     "birthday":"",
     "skillset":"",
-    "area":""
+    "area":"",
+    "profile_pic_url":""
   }
 ]
