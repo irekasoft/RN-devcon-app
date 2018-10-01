@@ -19,24 +19,20 @@ import MemberDetailScreen from './src/screens/MemberDetailScreen'
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
-    screen: HomeMainScreen,
-    
+    screen: HomeMainScreen,    
   },
   HomeDetail:{
     screen: HomeDetailScreen
-  },
-  
+  },  
 },{
   navigationOptions:{
     headerTintColor:'white',
     headerStyle:{
-      backgroundColor:'#1D1D1D',
+      backgroundColor:AppStyle.headerBackgroundColor,
       borderBottomWidth:0,
-
     },    
     headerTitleStyle:{
-      textAlign:'center',
-      
+      textAlign:'center',      
     }
   }
 })
@@ -48,6 +44,17 @@ const EventsStackNavigator = createStackNavigator({
   EventDetail:{
     screen: EventDetailScreen
   }
+},{
+  navigationOptions:{
+    headerTintColor:'white',
+    headerStyle:{
+      backgroundColor:AppStyle.headerBackgroundColor,
+      borderBottomWidth:0,
+    },    
+    headerTitleStyle:{
+      textAlign:'center',      
+    }
+  }
 })
 
 const MembersStackNavigator = createStackNavigator({
@@ -56,6 +63,17 @@ const MembersStackNavigator = createStackNavigator({
   },
   MemberDetail:{
     screen: MemberDetailScreen
+  }
+},{
+  navigationOptions:{
+    headerTintColor:'white',
+    headerStyle:{
+      backgroundColor:AppStyle.headerBackgroundColor,
+      borderBottomWidth:0,
+    },    
+    headerTitleStyle:{
+      textAlign:'center',      
+    }
   }
 })
 
@@ -110,8 +128,7 @@ const RootNavigator = createBottomTabNavigator({
       }     
       return <Text style={{fontSize:10,color:tintColor, textAlign:'center'}}>{titleString}</Text>
     },
-    tabBarVisible: tabBarVisible(navigation),
-    
+    tabBarVisible: tabBarVisible(navigation),    
   })
 })
 
@@ -131,7 +148,6 @@ const tabBarVisible = (navigation) => {
       } 
     });
   }  
-
   return showTabbar;  
 };
 

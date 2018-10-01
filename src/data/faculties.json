@@ -33,13 +33,13 @@
   },
   {
     "id":5,
-    "name":"Data Science",
+    "name":"React Native",
     "telegram_url":"http://link.devcon.my/telegram-reactnative",
     "description":"React Native is a field for building mobile application with high performance and quality."
   },
   {
     "id":6,
-    "name":"React Native",
+    "name":"IoT",
     "telegram_url":"http://link.devcon.my/telegram-iot",
     "description":""
   },
