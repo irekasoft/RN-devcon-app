@@ -3,7 +3,7 @@ import {
   View, 
   Text,
   Image,
-  Dimensions, 
+  Dimensions,
 } from 'react-native'
 
 const WIDTH = Dimensions.get('window').width
@@ -14,10 +14,11 @@ class EventDetailScreen extends Component {
     title: 'Event Detail',
   }
 
-  render() {
+render() {
     return (
       <View style={styles.container}>
         <View style={{width:WIDTH, height:180, backgroundColor:'white',marginTop:0, position: 'absolute'}}>
+
            <Image style={{width:'100%',height:'100%'}} source={{uri:'http://www.ihrnet.com/wp-content/uploads/2017/04/events.jpg'}}/>
          </View>
          <View style={styles.itemContainer}>
@@ -42,6 +43,7 @@ class EventDetailScreen extends Component {
   }
 }
 
+
 const styles = {
   container: {
     flex: 1,
@@ -50,6 +52,7 @@ const styles = {
   itemContainer: {
     marginTop: 120,
   },
+
   cell:{
     padding:10,
     backgroundColor:'#E9E9E9',
