@@ -5,9 +5,12 @@ import {
   Image,
   TouchableOpacity,
   Linking,
-  ScrollView
+  ScrollView,
+  Dimensions
 } from 'react-native'
 
+import { MapView  } from 'expo';
+const SCREEN_WIDTH = Dimensions.get('window').width;
 const HeaderText = (props) => {
   return (
     <Text style={{fontSize:30, fontWeight:'700', textAlign:'center', paddingTop:20, paddingBottom:5}} >{props.text}</Text>
@@ -31,7 +34,7 @@ class AboutMainScreen extends Component {
 
         <HeaderText text="By a community for the community"/>
 
-        <Text style={{padding:12,fontSize:17,lineHeight:26}}>We are an open community consists of tech experts and people with big hearts to help and spread on technology knowledge to the public with no fee at all. Currently, we deliver the following areas:</Text>
+        <Text style={styles.bodyText}>We are an open community consists of tech experts and people with big hearts to help and spread on technology knowledge to the public with no fee at all. Currently, we deliver the following areas:</Text>
 
         <View style={{flexDirection:'row', flexWrap:'wrap', justifyContent:'center' }}>
 
@@ -52,6 +55,27 @@ class AboutMainScreen extends Component {
         </View>
         </TouchableOpacity>
 
+        <HeaderText text="Come Chill with Us"/>
+        <Text style={styles.bodyText}>We are based in Magic, Cyberjaya where we can hang out here and have some coffee and code.</Text>
+
+        <MapView
+          style={{ width:SCREEN_WIDTH, height: 200 }}
+          initialRegion={{
+            latitude: 2.9093279,
+            longitude: 101.6547717,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
+
+          }}
+          showsUserLocation={ true }
+        >
+          <MapView.Marker
+            coordinate= {{latitude:2.9093279,longitude:101.6547717}}
+            title={"We are here"}
+            description={"Where the Magic happens."}
+          />
+        </MapView>
+
       </ScrollView>
     );
   }
@@ -62,6 +86,7 @@ const styles = {
     flex: 1,
     marginTop:44,
   },
+  bodyText:{padding:12,fontSize:17,lineHeight:26}
 };
 
 export default AboutMainScreen;

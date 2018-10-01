@@ -9,14 +9,13 @@ import {createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeMainScreen from './src/screens/HomeMainScreen'
 import AboutMainScreen from './src/screens/AboutMainScreen'
 import EventMainScreen from './src/screens/EventsMainScreen'
-import ChatMainScreen from './src/screens/ChatMainScreen'
 import ProfileMainScreen from './src/screens/ProfileMainScreen'
 import HomeDetailScreen from './src/screens/HomeDetailScreen'
 import MembersMainScreen from './src/screens/MembersMainScreen'
 
 import AppStyle from './src/styles/AppStyle'
-import EventDetailScreen from './src/screens/EventDetailScreen';
-import MemberDetailScreen from './src/screens/MemberDetailScreen';
+import EventDetailScreen from './src/screens/EventDetailScreen'
+import MemberDetailScreen from './src/screens/MemberDetailScreen'
 
 const HomeStackNavigator = createStackNavigator({  
   Home:{
@@ -75,7 +74,7 @@ const RootNavigator = createBottomTabNavigator({
   },
 
 },{
-  initialRouteName: 'TabHome', // prod: TabHome
+  initialRouteName: 'TabAbout', // prod: TabHome
   navigationOptions: ({navigation}) => ({    
     tabBarOptions: {      
       activeTintColor:AppStyle.activeTintColor,
