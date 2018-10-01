@@ -66,7 +66,7 @@ const RootNavigator = createBottomTabNavigator({
   TabEvents:{
     screen: EventsStackNavigator
   },
-  MembersMainScreen:{
+  TabMembers:{
     screen: MembersStackNavigator
   },
   TabAbout:{
@@ -74,7 +74,7 @@ const RootNavigator = createBottomTabNavigator({
   },
 
 },{
-  initialRouteName: 'TabHome', // prod: TabHome
+  initialRouteName: 'TabEvents', // prod: TabHome
   navigationOptions: ({navigation}) => ({    
     tabBarOptions: {      
       activeTintColor:AppStyle.activeTintColor,
@@ -91,7 +91,7 @@ const RootNavigator = createBottomTabNavigator({
         iconName = require('./src/img/ico_about.png');
       } else if (routeName === 'TabEvents') {
         iconName = require('./src/img/ico_events.png');
-      } else if (routeName === 'MembersMainScreen') {
+      } else if (routeName === 'TabMembers') {
         iconName = require('./src/img/ico_profile.png');
       }               
       return <Image source={iconName} style={{tintColor:tintColor}} />;
@@ -105,7 +105,7 @@ const RootNavigator = createBottomTabNavigator({
         titleString = "About";
       } else if (routeName === 'TabEvents') {
         titleString = "Events";
-      } else if (routeName === 'MembersMainScreen') {
+      } else if (routeName === 'TabMembers') {
         titleString = "Members";
       }     
       return <Text style={{fontSize:10,color:tintColor, textAlign:'center'}}>{titleString}</Text>
