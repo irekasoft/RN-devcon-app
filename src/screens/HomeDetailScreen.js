@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { 
-
   View, 
   Text,
   Dimensions,
   Image, 
-  Linking
-
+  Linking,
+  ScrollView,
+  TouchableOpacity,
 } from 'react-native'
+
 
 const WIDTH = Dimensions.get('window').width;
 
@@ -20,7 +21,7 @@ class HomeDetailScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         
         <Image 
           style={{width:WIDTH, height:255}}
@@ -32,13 +33,20 @@ class HomeDetailScreen extends Component {
             {this.props.navigation.state.params.faculty.name}
           </Text>
           <Text style={{fontSize:13, lineHeight:30}}>
-          Make use code snippet feature in VS Code make your life bit more easier when creating a new component or screen with React Native.
-  Just type rns an viola everything is ready.
-  What you have to do is open VS Code > Preference > User Snippets and add this new one.
+          {this.props.navigation.state.params.faculty.description}
+          
           </Text>          
         </View>
 
-      </View>
+        <View style={{ flex:1, flexDirection:'row', justifyContent:'center' }}>
+          <TouchableOpacity onPress={()=>{ Linking.openURL(this.props.navigation.state.params.faculty.telegram_url) }}> 
+            <Image source={require('../img/ico_telegram_group.png')}/>
+          </TouchableOpacity>
+
+        </View>
+
+
+      </ScrollView>
     );
   }
 }

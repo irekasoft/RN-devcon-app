@@ -13,10 +13,7 @@ class EventMainScreen extends Component {
 
 const styles = {
   container: {
-    marginTop:44,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 };
 
