@@ -1,0 +1,80 @@
+[
+  {
+    "id":0,
+    "name":"Academia",
+    "cover_img_url":"",
+    "telegram_url":"http://link.devcon.my/telegram-academia"
+  },
+  {
+    "id":1,
+    "name":"Volunteers",
+    "cover_img_url":"",
+    "telegram_url":"http://link.devcon.my/telegram-volunteers"
+  },
+  {
+    "id":2,
+    "name":"Notice Board",
+    "telegram_url":"http://link.devcon.my/telegram-noticeboard"
+  },
+  {
+    "id":3,
+    "name":"Machine Learning",
+    "telegram_url":"http://link.devcon.my/telegram-machinelearning"    
+  },
+  {
+    "id":4,
+    "name":"Data Science",
+    "telegram_url":"http://link.devcon.my/telegram-datascience"
+  },
+  {
+    "id":5,
+    "name":"Data Science",
+    "telegram_url":"http://link.devcon.my/telegram-reactnative"
+  },
+  {
+    "id":6,
+    "name":"React Native",
+    "telegram_url":"http://link.devcon.my/telegram-iot"
+  },
+  {
+    "id":7,
+    "name":"UI / UX",
+    "telegram_url":"http://link.devcon.my/telegram-uiux"
+  },
+  {
+    "id":8,
+    "name":"Web",
+    "telegram_url":"http://link.devcon.my/telegram-web"
+  },
+  {
+    "id":9,
+    "name":"Java",
+    "telegram_url":"http://link.devcon.my/telegram-java"
+  },
+  {
+    "id":10,
+    "name":"Android",
+    "telegram_url":"http://link.devcon.my/telegram-android"
+  },
+  {
+    "id":11,
+    "name":"iOS",
+    "telegram_url":"http://link.devcon.my/telegram-ios"
+
+  }, 
+  {
+    "id":12,
+    "name":"Blockchain",
+    "telegram_url":"http://link.devcon.my/telegram-blockchain"
+  },
+  {
+    "id":13,
+    "name":"Arduino & Scratch",
+    "telegram_url":"http://link.devcon.my/telegram-arduino_scratch"
+  },
+  {
+    "id":14,
+    "name":"Architecture",
+    "telegram_url":"http://link.devcon.my/telegram-architecture"
+  }
+]
