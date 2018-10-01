@@ -1,12 +1,19 @@
 [
   {
-    "name":"Muhammad Hijazi",
-    "telegram_url":"http://t.me/hijazi_irekasoft",
-    "description":"Academia is an institution"
+    "name":"Name ABC",
+    "telegram":"",
+    "github":"",
+    "description":"",
+    "birthday":"",
+    "skillset":"",
+    "area":"",
   },
   {
-    "name":"Muhammad Hijazi",
-    "telegram_url":"http://t.me/hijazi_irekasoft",
-    "description":"Academia is an institution"
+    "name":"Name #2",
+    "telegram":"",
+    "description":"",
+    "birthday":"",
+    "skillset":"",
+    "area":"",
   }
 ]

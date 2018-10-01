@@ -11,6 +11,11 @@ import {
 import members from '../data/members.json'
 
 class MembersMainScreen extends Component {
+
+  static navigationOptions = {
+    title: 'Members',
+  }
+
   render() {
     return (
       <View style={styles.container}>
