@@ -4,7 +4,6 @@ import {
   Text,
   Image,
   Dimensions,
-  P, 
 } from 'react-native'
 
 const WIDTH = Dimensions.get('window').width
