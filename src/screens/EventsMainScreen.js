@@ -58,6 +58,7 @@ const styles = {
     backgroundColor:'#E9E9E9',
     marginHorizontal: 8,
     marginTop: 8,
+    borderRadius: 5,
   }
 };
 

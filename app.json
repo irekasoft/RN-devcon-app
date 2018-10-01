@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "devcon-app",
-    "description": "This project is really great.",
+    "name": "DevCon",
+    "description": "Community app to learn something",
     "slug": "devcon-app",
     "privacy": "public",
     "sdkVersion": "30.0.0",

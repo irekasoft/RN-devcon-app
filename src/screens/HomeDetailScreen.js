@@ -7,7 +7,9 @@ import {
   Linking,
   ScrollView,
   TouchableOpacity,
+
 } from 'react-native'
+
 
 
 const WIDTH = Dimensions.get('window').width;
@@ -28,10 +30,14 @@ class HomeDetailScreen extends Component {
           source={require('../img/img_react_native_cover.png')}
         />
 
-        <View style={{padding:12}}>
+        <View>
           <Text style={{fontSize:18, fontWeight:'900', marginBottom:20}} >
             {this.props.navigation.state.params.faculty.name}
           </Text>
+
+        </View>
+
+        <View style={{padding:12}}>
           <Text style={{fontSize:13, lineHeight:30}}>
           {this.props.navigation.state.params.faculty.description}
           
