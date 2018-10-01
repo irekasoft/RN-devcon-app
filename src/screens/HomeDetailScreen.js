@@ -16,7 +16,7 @@ class HomeDetailScreen extends Component {
 
   // ${navigation.state.params.id}
   static navigationOptions = ({navigation}) => ({
-    title: ``,
+    title: `${navigation.state.params.faculty.name}`,
   });
 
   render() {
