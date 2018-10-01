@@ -74,7 +74,7 @@ const RootNavigator = createBottomTabNavigator({
   },
 
 },{
-  initialRouteName: 'TabAbout', // prod: TabHome
+  initialRouteName: 'TabHome', // prod: TabHome
   navigationOptions: ({navigation}) => ({    
     tabBarOptions: {      
       activeTintColor:AppStyle.activeTintColor,

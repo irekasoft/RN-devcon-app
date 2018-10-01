@@ -28,7 +28,7 @@ const PillText = (props) => {
 const PillButton = (props) => {
   return (
     <TouchableOpacity onPress={()=>{Linking.openURL(props.url);}}>
-      <View style={{borderRadius:33,height:30,backgroundColor:'gba(0,0,0,0)', justifyContent:'center', alignItems:'center', margin:4,borderColor:'black',borderWidth:1, alignSelf:'center'}} >
+      <View style={{borderRadius:33,height:30,backgroundColor:'rgba(0,0,0,0)', justifyContent:'center', alignItems:'center', margin:4,borderColor:'black',borderWidth:1, alignSelf:'center'}} >
         <Text style={{color:'black',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
       </View>
     </TouchableOpacity>
@@ -38,7 +38,7 @@ const PillButton = (props) => {
 const PillButton2 = (props) => {
   return (
     <TouchableOpacity style={{padding:4}}>
-      <View style={{borderRadius:33,height:30,backgroundColor:'gba(0,0,0,0)', justifyContent:'center', alignItems:'center',borderColor:'black',borderWidth:1, alignSelf:'center',width:SCREEN_WIDTH/2-8 }} >
+      <View style={{borderRadius:33,height:30,backgroundColor:'rgba(0,0,0,0)', justifyContent:'center', alignItems:'center',borderColor:'black',borderWidth:1, alignSelf:'center',width:SCREEN_WIDTH/2-8 }} >
         <Text style={{color:'black',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
       </View>
     </TouchableOpacity>
