@@ -10,8 +10,6 @@ import {
 
 } from 'react-native'
 
-
-
 const WIDTH = Dimensions.get('window').width;
 
 class HomeDetailScreen extends Component {
@@ -30,11 +28,10 @@ class HomeDetailScreen extends Component {
           source={require('../img/img_react_native_cover.png')}
         />
 
-        <View>
-          <Text style={{fontSize:18, fontWeight:'900', marginBottom:20}} >
+        <View style={{marginTop:-52, height:52, backgroundColor:'rgba(0,0,0,0.5)'}}>
+          <Text style={{fontSize:18, fontWeight:'900', marginBottom:20, color:'white', margin:14}} >
             {this.props.navigation.state.params.faculty.name}
           </Text>
-
         </View>
 
         <View style={{padding:12}}>

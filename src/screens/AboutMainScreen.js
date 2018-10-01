@@ -96,6 +96,7 @@ class AboutMainScreen extends Component {
           }}
           showsUserLocation = {true}
           scrollEnabled = {false}
+
           ref="maps"
           onRegionChangeComplete={() => this.refs.marker1.showCallout() }
         >
@@ -126,8 +127,13 @@ class AboutMainScreen extends Component {
 const styles = {
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
-  bodyText:{padding:12,fontSize:17,lineHeight:26}
+  bodyText:{
+    padding:12,
+    fontSize:17,
+    lineHeight:26
+  }
 };
 
 export default AboutMainScreen;
