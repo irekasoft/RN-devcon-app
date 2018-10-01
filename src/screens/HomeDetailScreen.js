@@ -29,7 +29,7 @@ class HomeDetailScreen extends Component {
 
         <View style={{padding:12}}>
           <Text style={{fontSize:18, fontWeight:'900', marginBottom:20}} >
-            React Native {this.props.navigation.state.params.id}
+            {this.props.navigation.state.params.faculty.name}
           </Text>
           <Text style={{fontSize:13, lineHeight:30}}>
           Make use code snippet feature in VS Code make your life bit more easier when creating a new component or screen with React Native.
