@@ -20,18 +20,41 @@ const HeaderText = (props) => {
 const PillText = (props) => {
   return (
     <View style={{borderRadius:33,height:30,backgroundColor:props.color, justifyContent:'center', alignItems:'center', margin:4}}>
-          <Text style={{color:'white',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
+      <Text style={{color:'white',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
     </View>
   )
 }
 
+const PillButton = (props) => {
+  return (
+    <TouchableOpacity onPress={()=>{Linking.openURL(props.url);}}>
+      <View style={{borderRadius:33,height:30,backgroundColor:'gba(0,0,0,0)', justifyContent:'center', alignItems:'center', margin:4,borderColor:'black',borderWidth:1, alignSelf:'center'}} >
+        <Text style={{color:'black',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
+      </View>
+    </TouchableOpacity>
+  )
+}
+
+const PillButton2 = (props) => {
+  return (
+    <TouchableOpacity style={{padding:4}}>
+      <View style={{borderRadius:33,height:30,backgroundColor:'gba(0,0,0,0)', justifyContent:'center', alignItems:'center',borderColor:'black',borderWidth:1, alignSelf:'center',width:SCREEN_WIDTH/2-8 }} >
+        <Text style={{color:'black',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>{props.title}</Text>
+      </View>
+    </TouchableOpacity>
+  )
+}
+
 class AboutMainScreen extends Component {
+
+  componentDidMount(){      
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
         
         <Image style={{alignSelf:'center'}} source={require('../img/img_devcon_logo.png')} />
-
         <HeaderText text="By a community for the community"/>
 
         <Text style={styles.bodyText}>We are an open community consists of tech experts and people with big hearts to help and spread on technology knowledge to the public with no fee at all. Currently, we deliver the following areas:</Text>
@@ -49,15 +72,13 @@ class AboutMainScreen extends Component {
 
         <HeaderText text="Visit our Website"/>
 
-        <TouchableOpacity onPress={()=>{Linking.openURL('https://www.devcon.my');}}>
-        <View style={{borderRadius:33,height:30,backgroundColor:'gba(0,0,0,0)', justifyContent:'center', alignItems:'center', margin:4,borderColor:'black',borderWidth:1, width:300, alignSelf:'center'}} >
-          <Text style={{color:'black',fontSize:13, paddingHorizontal:18, paddingVertical:8}}>www.devcon.my</Text>
-        </View>
-        </TouchableOpacity>
+        <PillButton title="www.devcon.my" url="https://www.devcon.my"/>
 
         <HeaderText text="Come Chill with Us"/>
         <Text style={styles.bodyText}>We are based in Magic, Cyberjaya where we can hang out here and have some coffee and code.</Text>
 
+        {/* MAPS */}
+        {/* refer to: https://github.com/react-community/react-native-maps */}
         <MapView
           style={{ width:SCREEN_WIDTH, height: 200 }}
           initialRegion={{
@@ -65,16 +86,30 @@ class AboutMainScreen extends Component {
             longitude: 101.6547717,
             latitudeDelta: 0.005,
             longitudeDelta: 0.005,
-
           }}
-          showsUserLocation={ true }
+          showsUserLocation = {true}
+          scrollEnabled = {false}
+          ref="maps"
+          onRegionChangeComplete={() => this.refs.marker1.showCallout() }
         >
           <MapView.Marker
             coordinate= {{latitude:2.9093279,longitude:101.6547717}}
             title={"We are here"}
-            description={"Where the Magic happens."}
+            description={"Where the Magic happens."}            
+            ref="marker1"
           />
         </MapView>
+
+        <View style={{height:12}}/>
+
+        <View style={{flexDirection:'row', flexWrap:'wrap', justifyContent:'center'}}>
+          <PillButton2 title="Navigate" url=""/>
+          <PillButton2 title="Show In Maps" url=""/>
+          <PillButton2 title="Hail a Grab" url=""/>
+          <PillButton2 title="Chill out Here" url=""/>                
+        </View>
+
+        <View style={{height:40}}/>
 
       </ScrollView>
     );
