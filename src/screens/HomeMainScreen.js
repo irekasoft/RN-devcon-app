@@ -32,13 +32,16 @@ class HomeMainScreen extends Component {
           </View>     
 
           {/* Header Text */}
-          <View style={{padding: 20}}>
-            <Text style={{fontSize:15,textAlign:'center'}}>
+          <View style={{padding: 20, backgroundColor:'black'}}>
+            <Text style={{fontSize:15,textAlign:'center',color:'white'}}>
             We educate people for free. We build community. We are powered by Volunteers. Our success is measured by how many lives that we are able to improve.
             </Text>
           </View>
-
+          
           {/* List of Groups  */}        
+          <View style={{padding:10, marginBottom:8}}>
+            <Text style={{fontSize:29, fontWeight:'700', color:'#3F3F3F'}}>Faculties</Text>
+          </View>
           <CardList {...this.props} />
 
         </ScrollView>
