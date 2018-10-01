@@ -23,8 +23,6 @@ class CardList extends Component {
     return (
       
       <View style={{width:WIDTH, backgroundColor:'white', flexDirection:'row', flexWrap:'wrap'}}>
-
-
         <FlatList
           data={faculties}
           numColumns={2}
@@ -35,10 +33,7 @@ class CardList extends Component {
               onPressTelegram={()=>{ Linking.openURL(item.telegram_url); }} 
            />
           }
-        />
-         
-                 
-                     
+        />                                            
       </View> 
       
       );

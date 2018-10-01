@@ -28,7 +28,7 @@ class Card extends Component {
         </View> 
 
         <TouchableOpacity onPress={this.props.onPress} >
-          <Text style={{fontSize:14, color:'black', margin:5}}>{this.props.title}</Text>
+          <Text style={{fontSize:14, color:'black', margin:5, fontWeight:'600'}}>{this.props.title}</Text>
         </TouchableOpacity>        
       </View>
     );
