@@ -24,7 +24,7 @@ class EventMainScreen extends Component {
 
   renderItem(item, index){
     return (
-      <TouchableOpacity onPress={({})=>{ this.props.navigation.navigate('EventDetail',{event:item})} } >
+      <TouchableOpacity onPress={()=>{ this.props.navigation.navigate('EventDetail', {item:item})} } >
       <View style={styles.cell}>
         <View style={{flexDirection:'row'}}>
           <Image source={{uri:'http://www.ihrnet.com/wp-content/uploads/2017/04/events.jpg'}} style={{width:65, height:65, borderRadius:32.5, overflow:'hidden', resizeMode:'cover', padding:0}} />
