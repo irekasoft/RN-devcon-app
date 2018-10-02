@@ -12,7 +12,7 @@ The Figma Design link is [here](https://www.figma.com/file/ZY5SAyPL5OFGWLbZydqIM
 
 Join DevCon React Native Telegram Group [here](https://t.me/joinchat/ADNaO0l8x_dIBY3VDyWCLA)
 
-
+Testrun App on [Expo](https://exp.host/@irekasoft/devcon-app)
  ## Requirements
 
  - Setup `node`, `yarn`, `Expo XDE` 
