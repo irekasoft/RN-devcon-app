@@ -4,18 +4,21 @@
     "telegram":"", 
     "region":"United States",
     "email":"tiffanyreid@example.com",
+    "description":"",
     "profile_pic_url":"https://uinames.com/api/photos/female/22.jpg"
   },
   {
     "name":"Jane Curtis",
     "telegram":"",
     "region":"United States",
+    "description":"",
     "profile_pic_url":"https://uinames.com/api/photos/female/11.jpg"
   },
   {
     "name":"Gregory Tran",
     "telegram":"",    
     "region":"United States",
+    "description":"",
     "profile_pic_url":"https://uinames.com/api/photos/male/9.jpg"
   }
 ]

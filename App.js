@@ -154,9 +154,6 @@ const tabBarVisible = (navigation) => {
   
   let showTabbar = true;
 
-  console.log('tabbarvisible');
-  console.log(navigation);
-
   if ( routes !== undefined ){
     routes.forEach((route) => {
       if (route.routeName === 'HomeDetail') {
