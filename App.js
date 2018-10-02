@@ -107,7 +107,6 @@ const RootNavigator = createBottomTabNavigator({
   TabAbout:{
     screen: AboutStackNavigator
   },
-
 },{
   initialRouteName: 'TabHome', // prod: TabHome
   navigationOptions: ({navigation}) => ({    

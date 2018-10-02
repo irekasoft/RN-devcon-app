@@ -96,7 +96,6 @@ class AboutMainScreen extends Component {
           }}
           showsUserLocation = {true}
           scrollEnabled = {false}
-          cacheEnabled = {true} // If true map will be cached and displayed as an image instead of being interactable, for performance usage.
           rotateEnabled = {false}
           ref="maps"
           onRegionChangeComplete={() => this.refs.marker1.showCallout() }
