@@ -6,10 +6,16 @@ import {
   TouchableOpacity,
   Image,
   Button,
+  RefreshControl,
 } from 'react-native'
 
 import events from '../data/events.json'
-import AppStyle from '../styles/AppStyle';
+import events_past from '../data/events_past.json'
+import events_upcoming from '../data/events_upcoming.json'
+
+import AppStyle from '../styles/AppStyle'
+
+import SegmentedControlTab from 'react-native-segmented-control-tab'
 
 class EventMainScreen extends Component {
 
@@ -17,15 +23,57 @@ class EventMainScreen extends Component {
     title: 'Events',
   }
 
+  state = {
+    event_segment_index: 0, // or "past"
+    refreshing: false
+  }
+
+  handleIndexChange = (index) => {
+    this.setState({
+      event_segment_index: index,
+    });
+  }
+
   render() {
+
+    let events = []
+
+    if (this.state.event_segment_index === 0){
+      events = events_upcoming;
+    }else if (this.state.event_segment_index === 1) {
+      events = events_past;
+    }
+
     return (
       <View style={styles.container}>
+        <View style={{height:44, backgroundColor:'#362743', padding:8}}>
+          <SegmentedControlTab
+            values={['Upcoming', 'Past']}
+            selectedIndex={this.state.event_segment_index}
+            onTabPress={this.handleIndexChange}
+            badges = {[1,0]}
+            tabStyle = {{borderColor:'#8A24E5',backgroundColor: 'transparent'}}
+            activeTabStyle = {{backgroundColor:'#8A24E5'}}
+            tabTextStyle= {{ color: '#CB91FF' }}
+            />
+        </View>
         <FlatList
+          refreshControl={
+              <RefreshControl
+                refreshing={this.state.refreshing}
+                onRefresh={ ()=>{ this.refreshData() } }
+              />
+            }
           data = {events}
           renderItem = {({item, index})=>this.renderItem(item,index)}
         />     
       </View>
-    );
+    );    
+
+  }
+
+  refreshData () {
+
   }
 
   renderItem(item, index){

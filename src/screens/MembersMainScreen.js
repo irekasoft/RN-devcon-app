@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   Button,
+  
 } from 'react-native'
 
 import members from '../data/members.json'
@@ -32,7 +33,7 @@ class MembersMainScreen extends Component {
       <TouchableOpacity onPress={()=>{ this.props.navigation.navigate('MemberDetail',{event:item})} } >
       <View style={styles.cell}>
         <View style={{flexDirection:'row'}}>
-          <Image source={{uri:'http://www.ihrnet.com/wp-content/uploads/2017/04/events.jpg'}} style={{width:65, height:65, borderRadius:32.5, overflow:'hidden', resizeMode:'cover'}} />
+          <Image source={{uri:item.profile_pic_url}} style={{width:65, height:65, borderRadius:32.5, overflow:'hidden', resizeMode:'cover'}} />
           <View style={{flex: 3,paddingHorizontal:12,paddingVertical:6,}}>
             <Text style={{fontWeight:'600'}}>{item.name}</Text>
             <Text>{item.description}</Text>
