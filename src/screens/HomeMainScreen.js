@@ -18,6 +18,9 @@ class HomeMainScreen extends Component {
 
   static navigationOptions = {
     title: 'DevCon',
+    navigationOptions: {
+      header: null,
+    }
   }
 
   render(){
@@ -27,16 +30,24 @@ class HomeMainScreen extends Component {
         <ScrollView>
 
           {/* Header Cover */}
-          <View style={{width:WIDTH, height:152, backgroundColor:'white',marginTop:0}}>
-            <Image style={{width:'100%',height:'100%'}} source={require('../img/img_header.png')}/>
-          </View>     
+          <View style={{width:WIDTH, backgroundColor:'white',marginTop:0, padding:0}}>
 
-          {/* Header Text */}
-          <View style={{padding: 20, backgroundColor:'black'}}>
-            <Text style={{fontSize:15,textAlign:'center',color:'white'}}>
+            <View style={{height:20}}></View>
+
+            <Image style={{position:'absolute',width:'100%',height:'100%'}} source={require('../img/people.jpg')}/>
+
+            <Image style={{marginLeft:(WIDTH-110)/2}} source={require('../img/devcon_circle.png')}/>
+
+            <View style={{backgroundColor:'rgba(0,0,0,0.5)'}}>
+            
+            <Text style={{fontSize:15,textAlign:'center',color:'white',padding:20}}>
             We educate people for free. We build community. We are powered by Volunteers. Our success is measured by how many lives that we are able to improve.
             </Text>
-          </View>
+            
+            </View>
+            
+          </View>     
+
           
           {/* List of Groups  */}        
           <View style={{padding:10, marginBottom:8}}>

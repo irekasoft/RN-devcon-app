@@ -3,6 +3,7 @@
     "id":0,
     "name":"Academia",
     "cover_img_url":"",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-academia",
     "description":"Academia is an institution"
   },
@@ -10,66 +11,78 @@
     "id":1,
     "name":"Volunteers",
     "cover_img_url":"",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-volunteers",
     "description":"Academia is an institution"
   },
   {
     "id":2,
     "name":"Notice Board",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-noticeboard",
     "description":"Academia is an institution"
   },
   {
     "id":3,
+    
     "name":"Machine Learning",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-machinelearning",
     "description":"Machine that can learn something new by program the system. "
   },
   {
     "id":4,
     "name":"Data Science",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-datascience",
     "description":""
   },
   {
     "id":5,
     "name":"React Native",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-reactnative",
     "description":"React Native is a field for building mobile application with high performance and quality."
   },
   {
     "id":6,
     "name":"IoT",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-iot",
     "description":""
   },
   {
     "id":7,
     "name":"UI / UX",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-uiux",
     "description":""
   },
   {
     "id":8,
     "name":"Web",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-web",
     "description":""
   },
   {
     "id":9,
     "name":"Java",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-java",
     "description":""
   },
   {
     "id":10,
     "name":"Android",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-android",
     "description":""
   },
   {
     "id":11,
     "name":"iOS",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-ios",
     "description":""
 
@@ -77,18 +90,21 @@
   {
     "id":12,
     "name":"Blockchain",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-blockchain",
     "description":""
   },
   {
     "id":13,
     "name":"Arduino & Scratch",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-arduino_scratch",
     "description":""
   },
   {
     "id":14,
     "name":"Architecture",
+    "icon": "../img/devcon_group_icons/academia.png",
     "telegram_url":"http://link.devcon.my/telegram-architecture",
     "description":""
   }

@@ -23,8 +23,6 @@ class MemberDetailScreen extends Component {
                <Image source={{uri:this.props.navigation.state.params.item.profile_pic_url}} style={{width:65, height:65, borderRadius:32.5, overflow:'hidden', resizeMode:'cover', padding:0}} />
                <View style={{flex: 3,paddingHorizontal:12,paddingVertical:0}}>
                  <Text style={{fontWeight:'600'}}>{this.props.navigation.state.params.item.name}</Text>
-                 <Text style={{ }}>{this.props.navigation.state.params.item.description}</Text>
-                 <View style={{height:13}}/>
                  <Text style={{fontSize:12, color:'gray'}}>{this.props.navigation.state.params.item.description}</Text>
                </View>
              </View>

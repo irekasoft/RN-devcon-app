@@ -25,10 +25,11 @@ class CardList extends Component {
       <View style={{width:WIDTH, backgroundColor:'white', flexDirection:'row', flexWrap:'wrap'}}>
         <FlatList
           data={faculties}
-          numColumns={2}
+          numColumns={3}
           renderItem={({item, index}) => 
             <Card 
-              title={item.name} 
+              index={index}
+              item={item} 
               onPress={()=>{this.props.navigation.navigate('HomeDetail',{id: item.id, faculty: item}) }} 
               onPressTelegram={()=>{ Linking.openURL(item.telegram_url); }} 
            />
