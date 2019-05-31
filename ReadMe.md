@@ -29,4 +29,8 @@ Testrun App on [Expo](https://exp.host/@irekasoft/devcon-app)
 
 # Screenshots
 
+<center><img src="assets/s1.png" alt="alt text" width="320" /></center>
+
+<center><img src="assets/s2.png" alt="alt text" width="320" /></center>
+
 <center><img src="assets/screenshot.png" alt="alt text" width="320" /></center>
